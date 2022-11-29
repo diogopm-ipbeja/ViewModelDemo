@@ -1,23 +1,17 @@
 package pt.ipbeja.viewmodeldemo.ui.form
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import androidx.navigation.navGraphViewModels
 import com.google.android.material.snackbar.Snackbar
 import pt.ipbeja.viewmodeldemo.R
 import pt.ipbeja.viewmodeldemo.databinding.FormStep1FragmentBinding
-import java.time.LocalDate
 
 class FormStep1Fragment : Fragment() {
 
@@ -25,7 +19,6 @@ class FormStep1Fragment : Fragment() {
 
 
     private val viewModel: FormViewModel by navGraphViewModels(R.id.formGraph)
-
 
 
     override fun onCreateView(
@@ -38,7 +31,7 @@ class FormStep1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        Log.i("ViewModelDemo", viewModel.toString())
+        Log.i("FormStep1Fragment", "NavGraph-scoped ViewModel => $viewModel")
 
         binding.nameInput.addTextChangedListener {
             viewModel.name = it?.toString()
@@ -47,10 +40,9 @@ class FormStep1Fragment : Fragment() {
         binding.next.setOnClickListener {
             val input = binding.nameInput.text?.toString()
 
-            if(input.isNullOrBlank()) {
+            if (input.isNullOrBlank()) {
                 Snackbar.make(requireView(), "Name is mandatory.", Snackbar.LENGTH_SHORT).show()
-            }
-            else {
+            } else {
                 findNavController().navigate(FormStep1FragmentDirections.actionFormStep1FragmentToFormStep2Fragment())
             }
 

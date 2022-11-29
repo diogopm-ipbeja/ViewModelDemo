@@ -30,7 +30,7 @@ class FormStep3Fragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.i("ViewModelDemo",viewModel.toString())
+        Log.i("FormStep3Fragment", "NavGraph-scoped ViewModel => $viewModel")
 
         binding.name.text = viewModel.name
         binding.dob.text = viewModel.dateOfBirth?.toString()

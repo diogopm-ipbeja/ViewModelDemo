@@ -15,7 +15,6 @@ class MainFragment : Fragment() {
 
 
     private lateinit var binding: MainFragmentBinding
-    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +26,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.startForm.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToFormStep1Fragment()))
+        binding.secondFragmentBtn.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToSecondFragment()))
     }
 
 }

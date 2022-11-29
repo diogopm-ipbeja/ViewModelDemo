@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_formStep1Fragment"
             app:destination="@id/formGraph" />
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
     </fragment>
     <navigation android:id="@+id/formGraph"
         app:startDestination="@id/formStep1Fragment">
@@ -20,7 +23,7 @@
             android:id="@+id/formStep1Fragment"
             android:name="pt.ipbeja.viewmodeldemo.ui.form.FormStep1Fragment"
             android:label="form_step1_fragment"
-            tools:layout="@layout/form_step3_fragment">
+            tools:layout="@layout/form_step1_fragment">
             <action
                 android:id="@+id/action_formStep1Fragment_to_formStep2Fragment"
                 app:destination="@id/formStep2Fragment" />
@@ -28,14 +31,30 @@
         <fragment
             android:id="@+id/formStep3Fragment"
             android:name="pt.ipbeja.viewmodeldemo.ui.form.FormStep3Fragment"
-            android:label="FormStep3Fragment" />
+            android:label="FormStep3Fragment"
+            tools:layout="@layout/form_step3_fragment"/>
         <fragment
             android:id="@+id/formStep2Fragment"
             android:name="pt.ipbeja.viewmodeldemo.ui.form.FormStep2Fragment"
-            android:label="FormStep2Fragment">
+            android:label="FormStep2Fragment"
+            tools:layout="@layout/form_step2_fragment">
             <action
                 android:id="@+id/action_formStep2Fragment_to_formStep3Fragment"
                 app:destination="@id/formStep3Fragment" />
         </fragment>
     </navigation>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="pt.ipbeja.viewmodeldemo.ui.main.SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/second_fragment">
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="pt.ipbeja.viewmodeldemo.ui.main.ThirdFragment"
+        android:label="ThirdFragment"
+        tools:layout="@layout/third_fragment"/>
 </navigation>

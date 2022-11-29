@@ -11,12 +11,16 @@ class FormViewModel() : ViewModel() {
     var dateOfBirth: LocalDate? = null
 
     init {
-        Log.i("ViewModelDemo","A new FormViewModel created!")
+        Log.i("FormViewModel","A new FormViewModel created!")
     }
 
     override fun toString(): String {
         return "name: $name | dob: $dateOfBirth"
     }
 
+    override fun onCleared() {
+        Log.i("FormViewModel","DESTROYED!")
+        super.onCleared()
+    }
 
 }
