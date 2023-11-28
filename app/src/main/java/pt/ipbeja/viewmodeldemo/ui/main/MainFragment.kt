@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import pt.ipbeja.viewmodeldemo.R
 import pt.ipbeja.viewmodeldemo.databinding.MainFragmentBinding
+import kotlin.random.Random
 
 class MainFragment : Fragment() {
 
@@ -25,7 +26,8 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.startForm.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToFormStep1Fragment()))
+        binding.startForm.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToFormGraph(
+            Random.nextInt())))
         binding.secondFragmentBtn.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToSecondFragment()))
     }
 

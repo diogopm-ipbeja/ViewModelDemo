@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.navGraphViewModels
 import com.google.android.material.snackbar.Snackbar
 import pt.ipbeja.viewmodeldemo.R
@@ -17,6 +18,7 @@ class FormStep1Fragment : Fragment() {
 
     private lateinit var binding: FormStep1FragmentBinding
 
+    private val args by navArgs<FormStep1FragmentArgs>()
 
     private val viewModel: FormViewModel by navGraphViewModels(R.id.formGraph)
 
