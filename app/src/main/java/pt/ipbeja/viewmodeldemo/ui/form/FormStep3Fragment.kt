@@ -1,18 +1,14 @@
 package pt.ipbeja.viewmodeldemo.ui.form
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import pt.ipbeja.viewmodeldemo.R
-import pt.ipbeja.viewmodeldemo.databinding.FormStep1FragmentBinding
 import pt.ipbeja.viewmodeldemo.databinding.FormStep3FragmentBinding
 
 class FormStep3Fragment : Fragment() {
@@ -36,7 +32,7 @@ class FormStep3Fragment : Fragment() {
         binding.dob.text = viewModel.dateOfBirth?.toString()
 
         binding.finish.setOnClickListener {
-            findNavController().popBackStack(R.id.formStep1Fragment, true)
+            findNavController().popBackStack(R.id.mainFragment, false)
         }
     }
 }

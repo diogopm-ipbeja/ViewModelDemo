@@ -21,34 +21,31 @@
                 android:id="@+id/nameTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"/>
+                android:text="Name" />
 
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@tools:sample/full_names"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                tools:text="@tools:sample/full_names" />
 
 
             <TextView
                 android:id="@+id/dobTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date of birth"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="24dp"
+                android:text="Date of birth" />
 
 
             <TextView
                 android:id="@+id/dob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@tools:sample/date/ddmmyy"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
-
-
-
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                tools:text="@tools:sample/date/ddmmyy" />
 
 
         </LinearLayout>
@@ -62,6 +59,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_baseline_done_24"/>
+        android:src="@drawable/ic_baseline_done_24" />
 
 </FrameLayout>

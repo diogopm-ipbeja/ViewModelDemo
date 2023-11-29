@@ -9,7 +9,7 @@
         android:id="@+id/mainFragment"
         android:name="pt.ipbeja.viewmodeldemo.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_formStep1Fragment"
             app:destination="@id/formGraph" />
@@ -20,7 +20,8 @@
             android:id="@+id/action_mainFragment_to_formGraph"
             app:destination="@id/formGraph" />
     </fragment>
-    <navigation android:id="@+id/formGraph"
+    <navigation
+        android:id="@+id/formGraph"
         app:startDestination="@id/formStep1Fragment">
         <fragment
             android:id="@+id/formStep1Fragment"
@@ -38,7 +39,7 @@
             android:id="@+id/formStep3Fragment"
             android:name="pt.ipbeja.viewmodeldemo.ui.form.FormStep3Fragment"
             android:label="FormStep3Fragment"
-            tools:layout="@layout/form_step3_fragment"/>
+            tools:layout="@layout/form_step3_fragment" />
         <fragment
             android:id="@+id/formStep2Fragment"
             android:name="pt.ipbeja.viewmodeldemo.ui.form.FormStep2Fragment"
@@ -65,5 +66,5 @@
         android:id="@+id/thirdFragment"
         android:name="pt.ipbeja.viewmodeldemo.ui.main.ThirdFragment"
         android:label="ThirdFragment"
-        tools:layout="@layout/third_fragment"/>
+        tools:layout="@layout/third_fragment" />
 </navigation>

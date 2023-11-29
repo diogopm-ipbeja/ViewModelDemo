@@ -6,19 +6,19 @@ import androidx.lifecycle.AndroidViewModel
 
 class ActivityScopedViewModel(app: Application) : AndroidViewModel(app) {
 
-     var counter = 0
+    var counter = 0
 
-     init {
-          Log.i("ActivityScopedViewModel", "created a new ViewModel")
-     }
+    init {
+        Log.i("ActivityScopedViewModel", "created a new ViewModel")
+    }
 
-     fun incrementAndGetCounter() : Int {
-          return ++counter
-     }
+    fun incrementAndGetCounter(): Int {
+        return ++counter
+    }
 
-     override fun onCleared() {
-          Log.i("ActivityScopedViewModel","DESTROYED!")
-          super.onCleared()
-     }
+    override fun onCleared() {
+        Log.i("ActivityScopedViewModel", "DESTROYED!")
+        super.onCleared()
+    }
 
 }

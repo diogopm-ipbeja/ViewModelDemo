@@ -1,14 +1,11 @@
 package pt.ipbeja.viewmodeldemo.ui.main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import pt.ipbeja.viewmodeldemo.R
 import pt.ipbeja.viewmodeldemo.databinding.MainFragmentBinding
 import kotlin.random.Random
 
@@ -26,9 +23,18 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.startForm.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToFormGraph(
-            Random.nextInt())))
-        binding.secondFragmentBtn.setOnClickListener(Navigation.createNavigateOnClickListener(MainFragmentDirections.actionMainFragmentToSecondFragment()))
+        binding.startForm.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                MainFragmentDirections.actionMainFragmentToFormGraph(
+                    Random.nextInt()
+                )
+            )
+        )
+        binding.secondFragmentBtn.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                MainFragmentDirections.actionMainFragmentToSecondFragment()
+            )
+        )
     }
 
 }

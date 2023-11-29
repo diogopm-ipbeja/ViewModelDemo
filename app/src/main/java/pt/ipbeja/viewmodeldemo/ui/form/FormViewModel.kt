@@ -3,7 +3,6 @@ package pt.ipbeja.viewmodeldemo.ui.form
 import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import java.time.LocalDate
 
 // o objecto SavedStateHandle é injetado automaticamente
@@ -19,7 +18,10 @@ class FormViewModel(private val stateHandle: SavedStateHandle) : ViewModel() {
     var dateOfBirth: LocalDate? = null
 
     init {
-        Log.i("FormViewModel","A new FormViewModel created! (navArgs: ${args.someArg} == stateHandle: $myArg)")
+        Log.i(
+            "FormViewModel",
+            "A new FormViewModel created! (navArgs: ${args.someArg} == stateHandle: $myArg)"
+        )
     }
 
     override fun toString(): String {
@@ -27,7 +29,7 @@ class FormViewModel(private val stateHandle: SavedStateHandle) : ViewModel() {
     }
 
     override fun onCleared() {
-        Log.i("FormViewModel","DESTROYED!")
+        Log.i("FormViewModel", "DESTROYED!")
         super.onCleared()
     }
 
